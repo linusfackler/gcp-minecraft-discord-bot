@@ -61,14 +61,14 @@ client.on('messageCreate', async (message) => {
     try {
         if (command === 'startvm') {
             await startInstance(process.env.PROJECT_ID, 'us-central1-c', 'minecraft');
-            message.channel.send('Starting the server...');
+            message.channel.send('Good morning');
         } else if (command === 'stopvm') {
             await stopInstance(process.env.PROJECT_ID, 'us-central1-c', 'minecraft');
-            message.channel.send('Stopping the server...');
+            message.channel.send('Good night');
         }
     } catch (error) {
         console.error(error);
-        message.channel.send('Failed to execute the command. Please check the logs.');
+        message.channel.send('Ermm, that didn\'t work...');
     }
 });
 
